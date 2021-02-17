@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Changemakers</string>
+    <string name="show_all">Show all</string>
+    <string name="show_found">Foundation</string>
+    <string name="show_buy">Others</string>
+    <string name="type_found">Foundation</string>
+    <string name="type_sale">Others</string>
+    <string name="display_type">%s</string>
+    <string name="display_price">For %s</string>
+</resources>

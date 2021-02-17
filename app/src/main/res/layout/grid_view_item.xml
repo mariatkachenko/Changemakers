@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="property"
+            type="com.example.changemakers.network.CmProperty" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <ImageView
+            android:id="@+id/cm_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            app:imageLinkUrl="@{property.imageLinkUrl}"
+            tools:src="@tools:sample/backgrounds/scenic"/>
+
+        <ImageView
+            android:id="@+id/cm_property_type"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom|end"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_for_sale_outline"
+            android:visibility="@{property.found ? View.GONE : View.VISIBLE}"
+            tools:src="@drawable/ic_for_sale_outline"/>
+    </FrameLayout>
+</layout>
